@@ -3,9 +3,9 @@
 		<ul class="nav navbar-nav">
 			<li><a href="{{ url_for('index') }}" class="navbar-brand">北京大学俄勒冈校友会<div class="brand-en">Peking University Alumni Association of Oregon</div></a></li>
 		{% if session.user %}
-			<li><a href="{{ url_for('logout') }}">Logout</a></li>
+			<li class="nav-item"><a href="{{ url_for('logout') }}">Logout</a></li>
 		{% else %}
-			<li><a href="{{ url_for('login') }}">Login</a></li>
+			<li class="nav-item"><a href="{{ url_for('login') }}">Login</a></li>
 		{% endif %}
 		</ul>
 
@@ -16,7 +16,7 @@
 		</button>
 	</div>
 	<div class="navbar-collapse collapse" id="navbar-main">
-		<ul class="nav navbar-nav">
+		<ul class="nav navbar-nav nav-item">
 			<li><a href="{{ url_for('recent_feed') }}" class="icon-rss"></a></li>
 		{% if session.user %}
 			<li><a href="{{ url_for('users_list') }}">Users</a></li>
